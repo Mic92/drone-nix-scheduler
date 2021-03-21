@@ -78,7 +78,7 @@ def main() -> None:
             dict(branch="master", commit=commit, derivation=str(drv))
         )
         num = int(data["number"])
-        url = "{server}/{repo}/{num}"
+        url = f"{server}/{repo}/{num}"
         print(f"{job}: {num_builds} build(s), {num_substititions} substition(s), build started at {url}")
         if data["status"] == "pending":
             jobs[num] = job
