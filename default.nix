@@ -1,13 +1,14 @@
-with import <nixpkgs> {};
-
-python3Packages.buildPythonApplication {
-  name = "drone-hydra-jobs";
-  src = ./.;
+{ pkgs ? import <nixpkgs> { }
+, srcDir ? ./.
+}:
+pkgs.python3Packages.buildPythonApplication {
+  name = "drone-nix-scheduler";
+  src = srcDir;
   format = "other";
   installPhase = ''
-    install -D -m755 ./drone-hydra-jobs.py $out/bin/drone-hydra-jobs
+    install -D -m755 ./drone-nix-scheduler.py $out/bin/drone-nix-scheduler
   '';
   propagatedBuildInputs = [
-    python3.pkgs.requests
+    pkgs.python3.pkgs.requests
   ];
 }

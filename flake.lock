@@ -1,0 +1,66 @@
+{
+  "nodes": {
+    "flake-utils": {
+      "locked": {
+        "lastModified": 1614513358,
+        "narHash": "sha256-LakhOx3S1dRjnh0b5Dg3mbZyH0ToC9I8Y2wKSkBaTzU=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "5466c5bbece17adaab2d82fae80b46e807611bf3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "hydra-eval-jobs": {
+      "inputs": {
+        "flake-utils": [
+          "flake-utils"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1616351851,
+        "narHash": "sha256-+FfvUKXzUYMmUgaZ13FjRikFQXaC1WxPoKbshxATdpE=",
+        "owner": "Mic92",
+        "repo": "hydra-eval-jobs",
+        "rev": "e55885c021822ffb3a006f6bc8eb0ab548fb8f2b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Mic92",
+        "repo": "hydra-eval-jobs",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1616357152,
+        "narHash": "sha256-Qba8RT5Z9DP8cZ4PY9ItX/Cpeq5cizPb//sDwI/eMb0=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "5bc2358f4b7fbc619169f59264ae69d10c162699",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "hydra-eval-jobs": "hydra-eval-jobs",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
