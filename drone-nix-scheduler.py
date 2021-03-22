@@ -2,6 +2,7 @@
 
 import requests
 import subprocess
+import time
 import json
 import os
 import sys
@@ -90,6 +91,7 @@ def main() -> None:
             data = client.build(num)
             if data["status"] not in ["pending", "running"]:
                 break
+            time.sleep(1)
         if data["status"] != "success":
             failures += 1
         status = data["status"]
