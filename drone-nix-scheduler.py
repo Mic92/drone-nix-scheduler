@@ -80,9 +80,11 @@ def main() -> None:
         )
         num = int(data["number"])
         url = f"{server}/{repo}/{num}"
-        print(f"{job}: {num_builds} build(s), {num_substititions} substition(s), build started at {url}")
+        print(f"{job}: {num_builds} build(s), {num_substititions} substition(s), build started at:\n{url}")
         if data["status"] == "pending":
             jobs[num] = job
+
+    print("\nWait for builds to finish...")
 
     failures = 0
     for num, job in jobs.items():
