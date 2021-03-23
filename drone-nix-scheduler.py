@@ -84,7 +84,10 @@ def main() -> None:
         if data["status"] == "pending":
             jobs[num] = job
 
-    print("\nWait for builds to finish...")
+    if len(jobs) == 0:
+        print("Nothing to build")
+    else:
+        print("Waiting for builds to finish...\n")
 
     failures = 0
     for num, job in jobs.items():
