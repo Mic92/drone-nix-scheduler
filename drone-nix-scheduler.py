@@ -78,7 +78,6 @@ def main() -> None:
         data = client.create_build(
             dict(branch="master", commit=commit, derivation=str(drv))
         )
-        print(data)
         num = int(data["number"])
         url = f"{server}/{repo}/{num}"
         print(f"{job}: {num_builds} build(s), {num_substititions} substition(s), build started at {url}")
